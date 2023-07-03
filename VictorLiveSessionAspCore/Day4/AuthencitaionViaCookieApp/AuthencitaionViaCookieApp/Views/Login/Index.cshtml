@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model  AuthencitaionViaCookieApp.ViewModels.LoginVM;
+
+<form asp-action="Index">
+    <br/>
+    <br/>
+        <p class="row">
+            <span class="col-2">Enter userId</span>
+           <input class="col-4" asp-for="UserId" />
+        <span class="col-6"></span>
+        </p>
+
+       <p class="row">
+            <span class="col-2">Enter password</span>
+           <input class="col-4" asp-for="UserPassword" />
+        <span class="col-6"></span>
+        </p>
+
+
+
+        <p class="row">
+            @Html.ValidationSummary()
+        </p>
+        <input class="btn btn-primary" type="submit" value="Login" />
+</form>
+
+

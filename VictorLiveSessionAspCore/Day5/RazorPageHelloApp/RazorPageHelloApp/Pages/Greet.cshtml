@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPageHelloApp.Pages.GreetModel
+@*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
+@{
+
+	<h1>@Model.Message</h1>
+
+<form method="post">
+
+   
+    @Html.TextBoxFor(m=>m.UserName)
+
+    <input type="submit" />
+</form>
+}

@@ -1,0 +1,25 @@
+﻿@model EmployeeIndexVM
+<html>
+	<head>
+		<title>@Model.IndexPageTile</title>
+	</head>
+	<body>
+		 <h1>@Model.IndexPageHeading</h1>
+		
+		 <h2>Found @Model.EmployeeCount , employees</h2>
+		 
+		  <a asp-action="Add">Add employee</a>
+		 <table>
+
+			 @foreach(var emp in Model.Employees){
+			   <tr>
+				   <td>@emp.Id</td>
+				<td>@emp.Name</td>
+				<td>@Model.GetEmpStatus( @emp.IsActive)</td>
+			   </tr>
+			 }
+		 </table>
+
+
+	</body>
+</html>

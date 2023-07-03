@@ -1,0 +1,29 @@
+
+<html>
+
+    <body>
+
+          <input type="button" value="GetOrganizations" onclick="getOrganisationData()" />
+
+
+
+    </body>
+
+    <script>
+        function getOrganisationData() {
+        // alert('get call')
+            fetch('http://localhost:5259/api/Organization')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response:', data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        }
+
+    </script>
+
+
+</html>

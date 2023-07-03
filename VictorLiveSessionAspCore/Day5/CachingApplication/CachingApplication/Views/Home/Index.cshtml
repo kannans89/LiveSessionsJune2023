@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Case1(expires after 5 seconds)</h1>
+
+<cache expires-after="@TimeSpan.FromSeconds(5)">
+
+    @DateTime.Now.ToLocalTime()
+   
+</cache>
+<hr />
+
+<h1>Case2(expires sliding)</h1>
+@*if accessed cache will be used but if not accessed for that seconds it wil bust*@
+<cache expires-sliding="@TimeSpan.FromSeconds(5)">
+
+    @DateTime.Now.ToLocalTime()
+</cache>
+<hr />
+<h1>Case3(vary by deptno)</h1>
+<cache vary-by="@ViewBag.deptno" expires-after="@TimeSpan.FromSeconds(5)">
+    @DateTime.Now.ToLocalTime()
+    <p>Displaying employee in :Deptno is @ViewBag.deptno</p>
+</cache>

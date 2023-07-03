@@ -1,0 +1,18 @@
+﻿
+
+<h1>Index view of home controller</h1>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<greet dev-name="Victor"></greet>
+
+@{
+	Html.RenderPartial("_timestamp", new TimeStamp {Title="time",
+	Format="hh:mm:ss" });
+}
+@{
+	Html.RenderPartial("_timestamp", new TimeStamp
+			{
+				Title = "date and time",
+				
+			});
+}

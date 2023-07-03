@@ -1,0 +1,13 @@
+﻿<h1>Send comment 2</h1>
+<form method="post">
+
+	 Enter your comment : 
+	 <textarea name="comment" rows="4" cols="50"></textarea>
+	 <input type="submit"/>
+</form>
+
+
+
+<h1>@(ViewBag.Comment ?? "No comments")</h1>
+
+<h1>@Html.Raw((ViewBag.Comment ?? "No comments"))</h1>

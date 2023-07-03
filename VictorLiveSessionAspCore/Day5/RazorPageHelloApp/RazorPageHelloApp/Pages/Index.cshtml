@@ -1,0 +1,9 @@
+﻿@page
+@model RazorPageHelloApp.Pages.IndexModel
+@{
+	<a href="Greet">Go to Greet</a>
+
+	@for (int i = 1; i <= 10; i++) { 
+	  <h1>Welcome to Index Razor page @i</h1>
+	}
+}

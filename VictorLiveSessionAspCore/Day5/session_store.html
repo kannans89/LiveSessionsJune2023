@@ -1,0 +1,24 @@
+<button id="incrementBtn">Increment</button>
+<p id="counterValue">0</p>
+
+<script>
+
+    // Get the counter value from sessionStorage, or set it to 0 if it doesn't exist
+let counter = sessionStorage.getItem('counter') || '0';
+
+// Update the counter value on the page
+document.getElementById('counterValue').textContent = counter;
+
+// Increment the counter and update it in sessionStorage on button click
+document.getElementById('incrementBtn').addEventListener('click', function() {
+  // Increment the counter value
+  counter++;
+  
+  // Update the counter value on the page
+  document.getElementById('counterValue').textContent = counter;
+  
+  // Store the updated counter value in sessionStorage
+  sessionStorage.setItem('counter', counter);
+});
+
+</script>

@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<h1>@(Context.Session.GetString("Comment") ?? "No comments")</h1>
+
+<h1>@Html.Raw(Context.Session.GetString("Comment") ?? "No comments")</h1>
